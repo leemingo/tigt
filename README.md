@@ -1,11 +1,13 @@
-# Topology-Informed Graph Transformer
+# Topology-Informed Graph Transformer (TIGT)
  
 [![arXiv](https://img.shields.io/badge/arXiv-2402.02005-b31b1b.svg)](https://arxiv.org/abs/2402.02005)
 
-This repository is the official implementation of [TOPOLOGY-INFORMED GRAPH TRANSFORMER](https://arxiv.org/abs/2402.02005) (Choi et al., GRaM Workshop at ICML 2024).
+This repository is the official implementation of [Topology-Informed Graph Transformer](https://arxiv.org/abs/2402.02005) (Choi et al., GRaM Workshop at ICML 2024).
 
-![cy2c-viz](./imgs/cy2c.png)
-![tigt-viz](./imgs/tigt.png)
+<!-- ![cy2c-viz](./imgs/cy2c.png) -->
+<!-- ![tigt-viz](./imgs/tigt.png) -->
+<img src="./imgs/cy2c.png" width="48">
+<img src="./imgs/tigt.png" width="48">
 
 
 The implementation is based on [GraphGPS (Rampasek et al., 2022)](https://github.com/rampasek/GraphGPS).
