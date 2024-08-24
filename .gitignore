@@ -1,7 +1,7 @@
 # Ignore all files inside the dataset/ folder
-dataset/*
+datasets/*
 # But do not ignore the dataset/ folder itself
-!dataset/
+!datasets/
 
 # Ignore all files inside the results/ folder
 results/*
