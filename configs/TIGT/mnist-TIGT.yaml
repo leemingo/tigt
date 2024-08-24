@@ -1,0 +1,80 @@
+out_dir: results
+metric_best: accuracy
+accelerator : cuda:1
+wandb:
+  use: False
+  project: MNIST
+dataset:
+  format: PyG-GNNBenchmarkDataset
+  name: MNIST
+  task: graph
+  task_type: classification
+  transductive: False
+  node_encoder: True
+  node_encoder_name: LinearNode
+  node_encoder_bn: False
+  edge_encoder: True
+  edge_encoder_name: LinearEdge
+  edge_encoder_bn: False
+cy2:
+  type_calayer : no_res
+  scatter_option : mean
+  local_mode : double
+  local_gnn_type : CustomGatedGCN
+  dim_hidden : 52
+  n_heads : 4
+  dropout : 0.0
+  pe_local_mode : double
+  pe_act : tanh
+  act : relu
+  pe_norm : batch
+  cy2c_self : False
+posenc_CY2C:
+  enable : True   
+posenc_LapPE:
+  enable: False
+  eigen:
+    laplacian_norm: none
+    eigvec_norm: L2
+    max_freqs: 8
+  model: DeepSet
+  dim_pe: 8
+  layers: 2
+  raw_norm_type: none
+train:
+  mode: custom
+  batch_size: 16
+  eval_period: 1
+  ckpt_period: 100
+model:
+  type: TiGTModel
+  loss_fun: cross_entropy
+  edge_decoding: dot
+  graph_pooling: mean
+gt:  # Hyperparameters optimized for ~100k budget.
+  layer_type: CustomGatedGCN+Transformer
+  layers: 3
+  n_heads: 4
+  dim_hidden: 52  # `gt.dim_hidden` must match `gnn.dim_inner`
+  dropout: 0.0
+  attn_dropout: 0.5
+  layer_norm: False
+  batch_norm: True
+gnn:
+  head: default
+  layers_pre_mp: 0
+  layers_post_mp: 3
+  dim_inner: 52  # `gt.dim_hidden` must match `gnn.dim_inner`
+  batchnorm: False
+  act: relu
+  dropout: 0.0
+  agg: mean
+  normalize_adj: False
+optim:
+  clip_grad_norm: True
+  optimizer: adamW
+  weight_decay: 1e-5
+  base_lr: 0.001
+  max_epoch: 200
+  scheduler: cosine_with_warmup
+  num_warmup_epochs: 5
