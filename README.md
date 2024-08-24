@@ -6,9 +6,13 @@ This repository is the official implementation of [Topology-Informed Graph Trans
 
 <!-- ![cy2c-viz](./imgs/cy2c.png) -->
 <!-- ![tigt-viz](./imgs/tigt.png) -->
-<img src="./imgs/cy2c.png" width="400">
-<img src="./imgs/tigt.png" width="400">
+<!-- <img src="./imgs/cy2c.png" width="400">
+<img src="./imgs/tigt.png" width="400"> -->
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="./imgs/cy2c.png" width="400">
+    <img src="./imgs/tigt.png" width="400">
+</div>
 
 The implementation is based on [GraphGPS (Rampasek et al., 2022)](https://github.com/rampasek/GraphGPS).
 
