@@ -44,3 +44,6 @@ python main.py --cfg configs/TIGT/peptides-func-TIGT.yaml --repeat 1 seed 10 wan
 The config files for the [GraphGPS](https://github.com/rampasek/GraphGPS) and [GRIT (Ma et al., ICML 2023)](https://github.com/liamma/grit) models work within their respective environments as uploaded on GitHub.
 
 In the case of the CSL data, it is assumed that the values for nodes and edges are all uniformly set to 1.
+
+## About This Project
+This project is developed and maintained by [SolverX](https://www.solverx.ai/) (previously known as Voltwin/AIAE).
